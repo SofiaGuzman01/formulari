@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Usuarios</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f9; display: flex; flex-direction: column; align-items: center; padding: 2em; }
+        h2 { color: #333; }
+        table { width: 80%; border-collapse: collapse; margin-top: 1.5em; background-color: white; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+        th, td { padding: 1em; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #f2f2f2; color: #333; }
+        tr:hover { background-color: #f1f1f1; }
+        a { display: block; margin-top: 2em; text-align: center; text-decoration: none; color: #007BFF; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h2>Usuarios Registrados</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{ usuario[0] }}</td>
+                <td>{{ usuario[1] }}</td>
+                <td>{{ usuario[2] }}</td>
+                <td>{{ usuario[3] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a  class="btn" href="formulario.html">volver a formulario</a>
+</body>
+</html>
+

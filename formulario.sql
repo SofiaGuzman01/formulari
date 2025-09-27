@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS usuarios (
+id INTEGER PRIMARY KEY AUTOINCREMENT,    
+nombre TEXT NOT NULL,    
+telefono TEXT NOT NULL,   
+email TEXT NOT NULL
+);
